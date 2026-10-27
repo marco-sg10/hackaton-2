@@ -7,6 +7,7 @@ import NotFoundPage from './features/NotFoundPage';
 
 import WantedPage from './features/wanted/WantedPage';
 import WantedDetailPage from './features/wanted/WantedDetailPage';
+import NewsPage from './features/news/NewsPage';
 
 function App() {
   return (
@@ -35,6 +36,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <WantedDetailPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/news"
+            element={
+              <ProtectedRoute>
+                <NewsPage />
               </ProtectedRoute>
             }
           />
