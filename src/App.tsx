@@ -8,6 +8,8 @@ import NotFoundPage from './features/NotFoundPage';
 import WantedPage from './features/wanted/WantedPage';
 import WantedDetailPage from './features/wanted/WantedDetailPage';
 import NewsPage from './features/news/NewsPage';
+import SagasPage from './features/sagas/SagasPage';
+import SagaStoryPage from './features/sagas/SagaStoryPage';
 
 function App() {
   return (
@@ -44,6 +46,22 @@ function App() {
             element={
               <ProtectedRoute>
                 <NewsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/sagas"
+            element={
+              <ProtectedRoute>
+                <SagasPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/sagas/:id"
+            element={
+              <ProtectedRoute>
+                <SagaStoryPage />
               </ProtectedRoute>
             }
           />
