@@ -2,6 +2,41 @@
 
 > *"¡El One Piece existe!"* — Edward Newgate
 
+---
+
+## 🏴‍☠️ Tripulación y Equipo
+
+- **Código de Equipo:** `TEAM-049`
+- **Integrantes:**
+  - **John Dayron Blas Huete** — Código: `202510974`
+  - **Rodolfo Elard Huaroc Enciso** — Código: `202220307`
+  - **Marco Sabino Guardian** — Código: `202220340`
+
+### 🚀 Instrucciones de Ejecución
+
+1. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+
+2. **Configuración de Entorno:**
+   Asegurar que el archivo `.env` contenga:
+   ```env
+   VITE_API_BASE_URL=https://logpose-api-jg7f.onrender.com/api/v1
+   ```
+
+3. **Iniciar servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Compilación de producción:**
+   ```bash
+   npm run build
+   ```
+
+---
+
 ## Descripción General
 
 La Gran Era de los Piratas está en su punto más alto. La **Guild de Cazarrecompensas** necesita el

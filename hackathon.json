@@ -1,0 +1,21 @@
+{
+  "teamCode": "TEAM-049",
+  "team_code": "TEAM-049",
+  "members": [
+    {
+      "name": "John Dayron Blas Huete",
+      "code": "202510974",
+      "email": "john.blas@utec.edu.pe"
+    },
+    {
+      "name": "Rodolfo Elard Huaroc Enciso",
+      "code": "202220307",
+      "email": "rodolfo.huaroc@utec.edu.pe"
+    },
+    {
+      "name": "Marco Sabino Guardian",
+      "code": "202220340",
+      "email": "marco.sabino@utec.edu.pe"
+    }
+  ]
+}
