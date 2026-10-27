@@ -16,7 +16,8 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      const from = (location.state as { from?: { pathname: string } })?.from?.pathname || '/';
+      const fromLoc = (location.state as { from?: { pathname: string; search?: string } })?.from;
+      const from = fromLoc ? `${fromLoc.pathname}${fromLoc.search || ''}` : '/';
       navigate(from, { replace: true });
     }
   }, [isAuthenticated, navigate, location]);

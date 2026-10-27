@@ -5,6 +5,9 @@ import ProtectedRoute from './features/auth/ProtectedRoute';
 import DashboardPage from './features/dashboard/DashboardPage';
 import NotFoundPage from './features/NotFoundPage';
 
+import WantedPage from './features/wanted/WantedPage';
+import WantedDetailPage from './features/wanted/WantedDetailPage';
+
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +19,22 @@ function App() {
             element={
               <ProtectedRoute>
                 <DashboardPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/wanted"
+            element={
+              <ProtectedRoute>
+                <WantedPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/wanted/:id"
+            element={
+              <ProtectedRoute>
+                <WantedDetailPage />
               </ProtectedRoute>
             }
           />
