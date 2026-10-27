@@ -106,7 +106,8 @@ export default function DashboardPage() {
             <div className="flex items-center gap-3">
               <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
               <p className="text-green-400 text-lg">
-                Log Pose activo - Desbloqueado el {new Date(logPose.unlockedAt!).toLocaleDateString()}
+                Log Pose activo - Desbloqueado el{' '}
+                {logPose.unlockedAt ? new Date(logPose.unlockedAt).toLocaleDateString() : 'Inspección Aprobada'}
               </p>
             </div>
           ) : (

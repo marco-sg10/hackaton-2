@@ -9,8 +9,11 @@ export interface DashboardSummary {
 }
 
 export interface LogPoseStatus {
+  status: 'LOCKED' | 'UNLOCKED';
+  grandLineUnlocked: boolean;
+  unlockedAt?: string | null;
+  message?: string;
   hasLogPose: boolean;
-  unlockedAt?: string;
 }
 
 export async function getDashboardSummary(token: string): Promise<DashboardSummary> {
@@ -38,5 +41,9 @@ export async function getLogPoseStatus(token: string): Promise<LogPoseStatus> {
     throw new Error('Failed to fetch log pose status');
   }
 
-  return response.json();
+  const data = await response.json();
+  return {
+    ...data,
+    hasLogPose: Boolean(data.grandLineUnlocked || data.status === 'UNLOCKED'),
+  };
 }
